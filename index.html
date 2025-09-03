@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button, output {
+            padding: 8px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Simple Addition Calculator</h2>
+
+    <label for="num1">Number 1:</label>
+    <input type="number" id="num1" value="0"><br>
+
+    <label for="num2">Number 2:</label>
+    <input type="number" id="num2" value="0"><br>
+
+    <button onclick="calculateSum()">Calculate Sum</button><br>
+
+    <label for="result">Result:</label>
+    <output id="result"></output>
+
+    <script>
+        function calculateSum() {
+            // Get values from input fields
+            const number1 = parseFloat(document.getElementById('num1').value);
+            const number2 = parseFloat(document.getElementById('num2').value);
+
+            // Perform the calculation
+            const sum = number1 + number2;
+
+            // Display the result
+            document.getElementById('result').value = sum;
+        }
+    </script>
+
+</body>
+</html>
